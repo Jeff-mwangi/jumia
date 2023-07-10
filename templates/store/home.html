@@ -1,0 +1,38 @@
+{%extends 'base.html'%}
+{% load static %}
+{%block content%}
+<!-- displaying image adverts for offers and products -->
+<div class="container">
+    <!-- <div class="row">
+        <div class="col-md-12 ads">
+            <img class="ads" src="https://ke.jumia.is/cms/2023/W23/CP/Sliders/Desktop/_S.jpg" alt="wine" srcset="">
+            <img class="ads" src="https://ke.jumia.is/cms/2023/JA23/Teasing/V1/KE_JA23_ACD_Tease_0523_S.png" alt="eletronics" srcset="">
+        </div>
+    </div> -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>Crazy Offers | Upto 50% Off</h3>
+            <div class="row items">
+                {% for product in products.products %}
+                <div class="col-lg-2 products">
+                    <a href="{% url 'product_detail' product.id %}">
+                    <div class="img">
+                        <img src="{{product.thumbnail}}" alt="" srcset="">
+                            <p class="discount-percentage">-{{product.discountPercentage|floatformat:0 }}%</p>
+                    </div>
+                    <div class="box-element product">
+                        <h4 class="product-name">{{product.title}}</h4>
+                        <h4 class="price"> $ {{product.price}}<h4 />
+                            <p>{{product.stock }} items left</p>
+                            <!-- progressbar for the items remaining -->
+                            <progress value={{product.stock}} max=500></progress>
+                    </div>
+                </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock content%}

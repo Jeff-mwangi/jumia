@@ -1,0 +1,251 @@
+body {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 1.5em;
+  color: black;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://c4.wallpaperflare.com/wallpaper/288/27/612/minimalism-wallpaper-preview.jpg"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  max-width: 100%;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+:root {
+  --theme-bg-color: #3761af;
+  --theme-color: white;
+
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  color: black;
+}
+
+ul.dropdown-cart {
+  min-width: 250px;
+}
+
+ul.dropdown-cart li .item {
+  display: block;
+  padding: 3px 10px;
+  margin: 3px 0;
+}
+
+ul.dropdown-cart li .item:hover {
+  background-color: #f3f3f3;
+}
+
+ul.dropdown-cart li .item:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+ul.dropdown-cart li .item-left {
+  float: left;
+}
+
+ul.dropdown-cart li .item-left img,
+ul.dropdown-cart li .item-left span.item-info {
+  float: left;
+}
+
+ul.dropdown-cart li .item-left span.item-info {
+  margin-left: 10px;
+}
+
+ul.dropdown-cart li .item-left span.item-info span {
+  display: block;
+}
+
+ul.dropdown-cart li .item-right {
+  float: right;
+}
+
+ul.dropdown-cart li .item-right button {
+  margin-top: 14px;
+}
+.navbar-nav li .dropdown-menu {
+  width: 250px;
+}
+
+#cart{
+  font-size: 20px;
+}
+.add-to-cart button{
+  width: 200px;
+}
+.search-product{
+  margin-top: 9px;
+  border-radius: 12%;
+}
+.input-group .form-control{
+  width: 300px;
+  border-radius: 12%;
+}
+input{
+  border-radius: 12%;
+}
+
+/* show a top rounded count of the cart on the fontawesome cart icon */
+.top-cart-count {
+position: absolute;
+top: 2px;
+width: 20px;
+height: 20px;
+line-height: 20px;
+text-align: center;
+border-radius: 50%;
+background-color: #1a7af7;
+color: #fff;
+font-size: 10px;
+font-weight: bold;
+}
+.ads {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.col-lg-12{
+  border-radius: 10px;
+}
+a{
+  color: black;
+}
+a:hover{
+  text-decoration: none;
+}
+h3{
+  background-color: rgb(57, 201, 201);
+  height: 35px;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.box-element {
+  color: black;
+  box-shadow: hsl(0, 0%, 80%)0 0 16px;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.product {
+  border-radius: 0 0 4px 4px;
+}
+
+.img {
+  overflow: hidden;
+}
+
+.img img {
+  padding-top: 15px;
+  border-radius: 4px 4px 0 0;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  /* Maintain the image's aspect ratio while covering the container */
+  object-position: center;
+  box-shadow: hsl(0, 0%, 80%)0 0 16px;
+  transition: all .3s ease-in-out;
+}
+
+.products:hover {
+  opacity: 0.82;
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+
+.product-name {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.img p{
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  color:#1a7af7 ;
+}
+.product-details p{
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  color:#1a7af7 ;
+}
+.discount-percentage{
+  background-color: #fff;
+  border-radius:50%;
+  padding:.3em;
+
+}
+.discount-percentage-details{
+  background-color: #1a7af7;
+}
+
+/* .price{
+  text-decoration: line-through;
+} */
+
+.product-details img {
+  width: 400px;
+  height: 400px;
+}
+
+.cart-image img{
+  width: 100px;
+  height: 100px;
+}
+.quantity{
+  font-weight: 400;
+  display: inline-block;
+  text-align: center;
+}
+.chg-quantity{
+  width: 12px;
+  cursor: pointer;
+  display:block;
+  font-size: 20px;
+  padding:2px;
+}
+.order{
+  padding: 12px;
+}
+.paymentMethod{
+  cursor: pointer;
+}
+.payment-method{
+  padding: 12px;
+  gap: 2;
+  cursor: pointer;
+}
+.items{
+  margin-top: 2rem!important;
+}
+.add-to-favourite{
+  background-color: #1a7af749;
+}
+.add-to-favourite i{
+  transition:.3s ease all ;
+  color: #1a7af7;
+  position: absolute;
+  top: 15px;
+  right: 50px;
+}

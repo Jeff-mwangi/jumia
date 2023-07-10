@@ -1,0 +1,67 @@
+{%extends 'base.html'%}
+{% load static %}
+{%block content%}
+<!-- displaying image adverts for offers and products -->
+<div class="container">
+    <!-- button to go back -->
+    <a href="{% url 'home' %}">
+        <button class="btn btn-secondary">Back</button>
+    </a>
+    <div class="row items">
+        <div class="col-lg-6 box-element">
+            <div class="product-details img">
+                <img src="{{product.images.2}}" alt="" srcset="">
+                <p style="color: white;" class="discount-percentage discount-percentage-details">-{{product.discountPercentage|floatformat:0 }}%</p>
+            </div>
+        </div>
+            <div class="col-lg-6">
+                <div class="box-element product">
+                    <!-- add to favorite  using blue love -->
+                    <a class="add-to-favourite" href="">
+                        <i class="fa fa-heart-o fa-2x" aria-hidden="true"></i>
+                    </a>
+
+                    <h4 class="product-name">{{product.title}}</h4>
+                    <small><strong>Brand:</strong> {{product.brand}}</small>
+                    <h4 class="price"> $ {{product.price}}<h4 />
+                        <h4><strong>Product Details</strong></h4>
+                        <p>{{product.description}}</p>
+                        <!-- makes stars depending on the product rating -->
+                        <p>Rating: {{product.rating}}</p>
+                        
+                        <div>
+                            <p>{{product.stock }} items left</p>
+                        <!-- progressbar for the items remaining -->
+                        <progress value={{product.stock}} max=500></progress>
+                        </div>
+                        <a href="" class="add-to-cart">
+                            <button data-product="{{product.id}}" data-action="add" id="add-to-cart" class="btn btn-primary add-to-cart">Add to Cart</button>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // loop through the images of the products and displaying them at 4 seconds interval
+    var imgs = document.querySelectorAll('.items .product-details');
+    var img = document.querySelectorAll('.items .product-details img');
+    var i = 0;
+    var time = 2000;
+    setInterval(function() {
+        i++;
+        var index = i % imgs.length;
+        var indexImg = i % img.length;
+        imgs[index].classList.add('active');
+        img[indexImg].classList.add('active');
+        for (var x = 0; x < imgs.length; x++) {
+            if (x != index) {
+                imgs[x].classList.remove('active');
+                img[x].classList.remove('active');
+            }
+        }
+    }, time);
+</script>
+
+{% endblock content%}

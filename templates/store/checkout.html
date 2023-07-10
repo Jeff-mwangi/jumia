@@ -1,0 +1,63 @@
+{%extends 'base.html'%}
+{% load static %}
+{% load crispy_forms_tags %}
+{%block content%}
+<!-- shipping address -->
+
+<div class="container">
+    <div class="row">
+        <div class="shipping-address">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 box-element">
+                        <h2>Shipping Address</h2>
+                        <hr>
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            {{form | crispy}}
+                            <button class="btn btn-primary" type="submit">Save</button>
+                        </form>
+                    </div>
+                    <!-- order summary -->
+                    <div class="col-lg-6 box-element order">
+                        <!-- back to cart button -->
+                        <a href="{% url 'cart' %}">
+                            <button class="btn btn-secondary"> <i class="fa fa-arrow-left" aria-hidden="true"></i>Back to Cart</button>
+                        </a>
+                        <br>
+                        <h2>Order Summary</h2>
+                        <table class="table">
+                            <tr>
+                                <th>Items</th>
+                                <td><strong>2</strong></td>
+                            </tr>
+                            <tr>
+                                <th>Total</th>
+                                <td><strong>$400</strong></td>
+                            </tr>
+                        </table>
+                        <h2>Payment Method</h2>
+                        <hr>
+                        <div class="payment-method">
+                            <!-- radio button -->
+                            <input class="paymentMethod" id="mpesa" name="paymentMethod" value="Mpesa" checked type="radio">
+                            <label class="paymentMethod" for="mpesa"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/M-PESA_LOGO-01.svg/2560px-M-PESA_LOGO-01.svg.png" alt="" width="150" height="100" srcset=""></label>
+                            
+                            <input class="paymentMethod" id="cash-on-delivery" name="paymentMethod" value="Cash On Delivery" type="radio">
+                            <label class="paymentMethod" for="cash-on-delivery"><img src="https://static.vecteezy.com/system/resources/previews/020/574/330/original/cash-on-delivery-badge-pack-free-png.png" alt="" width="150" height="100" srcset=""></label>
+                            
+                            <input class="paymentMethod" id="paypal" name="paymentMethod" value="Paypal" type="radio">
+                            <label class="paymentMethod" for="paypal"><img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c530.png" alt="" width="150" height="50" srcset=""></label>
+                        </div>
+                        <br>
+                        <a href="{% url 'checkout' %}">
+                            <button class="btn btn-primary">Place Order</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content%}
