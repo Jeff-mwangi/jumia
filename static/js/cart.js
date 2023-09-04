@@ -9,12 +9,34 @@ for (let i=0;i<updateBtns.length;i++) {
         if (user === 'AnonymousUser') {
             console.log('User is not authenticated');
         } else {
-            console.log("I was clicked");
-            // updateUserOrder(productId, action);
+            updateUserOrder(productId, action);
         }
     });
 }
 
+function updateUserOrder(productId, action){
+    console.log('User is authenticated, sending data...');
+
+    var url = '/update_product/';
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken' : csrftoken,
+        },
+        body: JSON.stringify({'productId': productId, 'action': action})
+    })
+
+    .then((response) => {
+        return response.json();
+    })
+
+    .then((data) => {
+        console.log('data:', data);
+        location.reload();
+    });
+}
 
 
 // for (let i=0;i<updateBtns.length;i++) {

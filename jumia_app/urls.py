@@ -13,6 +13,7 @@ urlpatterns = [
     path('register/', Registration.as_view(template_name='register.html'), name='register'),
     # Shipping Address
     path('checkout/', ShippingAddress.as_view(template_name = 'store/checkout.html'), name='checkout'),
+    path('update_product/', updateProduct, name='update_product'),
     # path('login/', views.login_view, name='login'),
     # path('logout/', views.logout_view, name='logout'),
     # path('profile/', views.profile, name='profile'),
