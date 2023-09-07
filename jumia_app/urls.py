@@ -9,8 +9,6 @@ urlpatterns = [
     path('cart/', cart, name='cart'),
     # path to product details
     path('product/<int:pk>/', product_detail, name='product_detail'),
-    # Registration
-    path('register/', Registration.as_view(template_name='register.html'), name='register'),
     # Shipping Address
     path('checkout/', ShippingAddress.as_view(template_name = 'store/checkout.html'), name='checkout'),
     path('update_product/', updateProduct, name='update_product'),

@@ -3,15 +3,26 @@
 {% load crispy_forms_tags %}
 {%block content%}
 <!-- registrastion page -->
-<div class="coontainer">
-    <div class="row">
-        <div class="col-lg-12">
-            <form action="" method="post">
-            {{form | crispy}}
-            <button class="btn btn-success" type="submit">Register</button>
-        </form>
-        </div>
-    </div>
-</div>
 
-{%endblock content%}
+<section>
+    <div class="container">
+      <div class="user signupBx">
+        <div class="formBx">
+          <form action="">
+            <h2>Create an account</h2>
+            <input type="text" name="" placeholder="Username" />
+            <input type="email" name="" placeholder="Email Address" />
+            <input type="password" name="" placeholder="Create Password" />
+            <input type="password" name="" placeholder="Confirm Password" />
+            <input type="submit" name="" value="Sign Up" />
+            <p class="signup">
+              Already have an account ?
+              <a href="#">Sign in.</a>
+            </p>
+          </form>
+        </div>
+        <div class="imgBx"><img src="https://thumbs.dreamstime.com/b/metal-shopping-cart-full-vegetables-metal-shopping-cart-full-vegetables-farming-fresh-food-organic-agriculture-products-126066713.jpg" alt="" /></div>
+      </div>
+    </div>
+  </section>
+{% endblock content%}

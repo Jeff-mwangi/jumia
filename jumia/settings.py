@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'livereload',
     'crispy_forms',
     'crispy_bootstrap4',
+    'phonenumber_field',
 
 
     # local

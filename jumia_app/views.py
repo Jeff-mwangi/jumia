@@ -17,16 +17,6 @@ def product_detail(request, pk):
 
 def cart (request):
     return render (request, 'store/cart.html')
-
-class Registration(CreateView):
-    model = Customer
-    form_class = Customer
-    template_name = 'register.html'
-    success_url = reverse_lazy('login')
-
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super().form_valid(form)
     
 class ShippingAddress(CreateView):
     model = ShippingAddress
