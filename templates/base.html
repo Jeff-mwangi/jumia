@@ -90,40 +90,26 @@ const csrftoken = getCookie('csrftoken');
               <li>
                 <div class="navbar-login">
                   <div class="row">
-                    <div class="col-lg-4">
-                      <div class="text-center">
-                        <img class="float-left" style="object-fit: cover;" width="100" height="100"
-                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkiIFjCOZ-mMeqxd2ryrneiHedE8G9S0AboA&usqp=CAU"
-                          alt="" srcset="">
-                      </div>
-                    </div>
                     <div class="col-lg-8">
-                      <p class="text-left"><strong>John Doe</strong></p>
-                      <p class="text-left small">johndoe@email.com</p>
-                      <p class="text-left">
-                        <a href="" class="btn btn-primary btn-block btn-sm">Update Profile</a>
+                      <p class="text-center">
+                        <a href="" class=""><img src="https://freesvg.org/storage/img/thumb/abstract-user-flat-1.png" width="18" height="18" alt="" srcset=""> Profile</a>
+                      </p>
+                      <p class="text-center">
+                        <a href="" class=""><img src="https://www.svgrepo.com/download/13688/settings.svg" width="18" height="18" alt="" srcset=""> Settings</a>
+                      </p>
+                      <p class="text-center">
+                        <a href="{% url 'logout' %}""><img src="https://cdn-icons-png.flaticon.com/512/2529/2529508.png" width="18" height="18" alt="" srcset=""> Log Out</a>
                       </p>
                     </div>
                   </div>
                 </div>
               </li>
               <li class="divider"></li>
-              <li>
-                <div class="navbar-login navbar-login-session">
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <p>
-                        <a href="" class="btn btn-danger btn-block">Log Out</a>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </li>
             </ul>
           </li>
           {% else %}
           <li class="nav-item">
-            <a class="nav-link" href="">Login</a>
+            <a class="nav-link" href="{% url 'login' %}">Login</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'register' %}">Register</a>
@@ -150,6 +136,21 @@ const csrftoken = getCookie('csrftoken');
       </div>
       {% block content%} {% endblock content%}
     </div>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/64aba42294cf5d49dc62918b/1h4v7ia5o';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
@@ -157,19 +158,6 @@ const csrftoken = getCookie('csrftoken');
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-slimscroll/1.3.8/jquery.slimscroll.min.js'></script>
     <script type="" src="{% static 'js/cart.js'%}"></script>
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/64aba42294cf5d49dc62918b/1h4v7ia5o';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  })();
-  </script>
-  <!--End of Tawk.to Script-->
 </body>
 
 </html>

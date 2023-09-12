@@ -2,22 +2,39 @@
 {% load static %}
 {% load crispy_forms_tags %}
 {%block content%}
-<!-- registrastion page -->
-
 <section>
     <div class="container">
       <div class="user signupBx">
         <div class="formBx">
-          <form action="">
+          <form method="POST" action="">
+            {% csrf_token %}
             <h2>Create an account</h2>
-            <input type="text" name="" placeholder="Username" />
-            <input type="email" name="" placeholder="Email Address" />
-            <input type="password" name="" placeholder="Create Password" />
-            <input type="password" name="" placeholder="Confirm Password" />
+            <!-- display each field form errors -->
+            {{form.username}}
+            <!-- dipaly username error -->
+            {% for error in form.username.errors %}
+            <p class="text-danger">{{error}}</p>
+            {% endfor %}
+            {{form.email}}
+            {% for error in form.email.errors %}
+            <p class="text-danger">{{error}}</p>
+            {% endfor %}
+            {{form.phone_number}}
+            {% for error in form.phone_number.errors %}
+            <p class="text-danger">{{error}}</p>
+            {% endfor %}
+            {{form.password1}}
+            {% for error in form.password1.errors %}
+            <p class="text-danger">{{error}}</p>
+            {% endfor %}
+            {{form.password2}}
+            {% for error in form.password2.errors %}
+            <p class="text-danger">{{error}}</p>
+            {% endfor %}
             <input type="submit" name="" value="Sign Up" />
-            <p class="signup">
+            <p class="text-muted" class="signup">
               Already have an account ?
-              <a href="#">Sign in.</a>
+              <a href="{% url 'login' %}">Sign in.</a>
             </p>
           </form>
         </div>
@@ -25,4 +42,4 @@
       </div>
     </div>
   </section>
-{% endblock content%}
+  {%endblock content%}

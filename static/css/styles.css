@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+:root {
+  --theme-bg-color: #677eff;
+  --theme-color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat';
+  box-sizing: border-box;
+  color: black;
+}
+
 body {
   color: black;
   /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://c4.wallpaperflare.com/wallpaper/288/27/612/minimalism-wallpaper-preview.jpg"); */
@@ -9,23 +24,6 @@ body {
   max-width: 100%;
   flex-wrap: wrap;
   padding: 20px;
-}
-
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
-:root {
-  --theme-bg-color: #3761af;
-  --theme-color: white;
-
-
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  font-family: 'Open Sans', sans-serif;
-  box-sizing: border-box;
-  color: black;
 }
 
 ul.dropdown-cart {
@@ -76,7 +74,7 @@ ul.dropdown-cart li .item-right button {
   margin-top: 14px;
 }
 .navbar-nav li .dropdown-menu {
-  width: 250px;
+  width: 150px;
 }
 
 #cart{
@@ -106,7 +104,7 @@ height: 20px;
 line-height: 20px;
 text-align: center;
 border-radius: 50%;
-background-color: #1a7af7;
+background-color: #677eff;
 color: #fff;
 font-size: 10px;
 font-weight: bold;
@@ -125,15 +123,20 @@ a{
 a:hover{
   text-decoration: none;
 }
-h3{
-  background-color: rgb(57, 201, 201);
+.offers{
+  background-color: #24beec;
+  color: #f3f3f3;
   height: 35px;
   width: 100%;
   border-radius: 10px;
   display: flex;
-  justify-content: center;
+  padding-left: 20px;
   align-items: center;
-  
+  justify-content: space-around;
+}
+.offers p,span{
+  text-align: center;
+  font-weight: 1.25rem;
 }
 
 .box-element {
@@ -179,13 +182,13 @@ h3{
   position: absolute;
   top: 15px;
   right: 18px;
-  color:#1a7af7 ;
+  color:#677eff ;
 }
 .product-details p{
   position: absolute;
   top: 15px;
   right: 18px;
-  color:#1a7af7 ;
+  color:#677eff ;
 }
 .discount-percentage{
   background-color: #fff;

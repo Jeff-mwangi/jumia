@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 
     # local
     'jumia_app.apps.JumiaAppConfig',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -144,7 +145,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = 'home'
 
-LOGOUT_REDIRECT_URL = 'home'
+
 
 LOGIN_URL = 'login'
 
