@@ -1,4 +1,4 @@
-# Jumiya Ecommerce Website
+# Jumiya Ecommerce Website (Still underdevelopment)
 
 Jumiya is an ecommerce website that allows users to browse, search, add to cart, and checkout various products. The application utilizes the [DummyJSON API](https://dummyjson.com/products) to fetch product data and provide a realistic shopping experience.
 The website is built using the Django framework and JavaScript to create a seamless and interactive user interface. It offers a wide range of features to enhance the user experience and simplify the online shopping process.
