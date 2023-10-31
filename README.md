@@ -40,6 +40,22 @@ python manage.py runserver
 ```
 Open your web browser and access the website at http://localhost:8000.
 
+# Homepage
+
+![jumiya](https://github.com/Jeff-mwangi/jumiya/assets/55315174/e5d5fa6e-8d8d-4cad-8926-d5e21c733bed)
+
+![jumiya home](https://github.com/Jeff-mwangi/jumiya/assets/55315174/8ee71240-5b32-4c17-8c13-d81f3b9624a1)
+
+# Details Page
+![jumiya-detail-page](https://github.com/Jeff-mwangi/jumiya/assets/55315174/ce472b1b-a52e-45c5-be08-96fc73e96e08)
+
+# Cart Page
+![jumiya cart](https://github.com/Jeff-mwangi/jumiya/assets/55315174/c61e2c51-311a-426f-ac76-d61e4b26830f)
+
+# Checkout Page
+![jumiya checkout](https://github.com/Jeff-mwangi/jumiya/assets/55315174/851e363a-d821-4627-8051-32af7ad3e9ee)
+
+
 Contributing
 Contributions to Jumiya are always welcome! If you have any ideas, suggestions, or bug reports, please submit them as issues on the GitHub repository. Feel free to fork the repository and create pull requests to contribute code enhancements or new features.
 
